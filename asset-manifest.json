@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/auziak/you-translate/static/css/main.2ff4325a.chunk.css",
+    "main.js": "/auziak/you-translate/static/js/main.3eedd156.chunk.js",
+    "main.js.map": "/auziak/you-translate/static/js/main.3eedd156.chunk.js.map",
+    "runtime~main.js": "/auziak/you-translate/static/js/runtime~main.eca5f771.js",
+    "runtime~main.js.map": "/auziak/you-translate/static/js/runtime~main.eca5f771.js.map",
+    "static/js/2.9294c85b.chunk.js": "/auziak/you-translate/static/js/2.9294c85b.chunk.js",
+    "static/js/2.9294c85b.chunk.js.map": "/auziak/you-translate/static/js/2.9294c85b.chunk.js.map",
+    "index.html": "/auziak/you-translate/index.html",
+    "precache-manifest.11a0f3e22951c04d045c6625f073b404.js": "/auziak/you-translate/precache-manifest.11a0f3e22951c04d045c6625f073b404.js",
+    "service-worker.js": "/auziak/you-translate/service-worker.js",
+    "static/css/main.2ff4325a.chunk.css.map": "/auziak/you-translate/static/css/main.2ff4325a.chunk.css.map"
+  }
+}
