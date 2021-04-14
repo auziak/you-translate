@@ -1,9 +1,9 @@
-import React from 'react';
-import NavBar from './NavBar';
-import MainSection from './MainSection';
-import VideosList from './VideosList';
-import Container from '../styling-components/Container';
-import { MyContext } from '../MyContext';
+import React from "react";
+import NavBar from "./NavBar";
+import MainSection from "./MainSection";
+import VideosList from "./VideosList";
+import Container from "../styling-components/Container";
+import { MyContext } from "../MyContext";
 
 class Home extends React.Component {
   static contextType = MyContext;

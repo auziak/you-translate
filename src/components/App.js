@@ -1,13 +1,12 @@
 import React from "react";
 import "../App.css";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import { API_KEY } from "../config/config";
 import Home from "./home/Home";
 import Library from "./library/Library";
 import Error from "./error";
 import MyContextProvider from "./MyContext";
 
-console.log(process.env.REACT_APP_YOUTUBE_API_KEY);
+const { REACT_APP_YOUTUBE_API_KEY: API_KEY } = process.env;
 
 class App extends React.Component {
   constructor() {
