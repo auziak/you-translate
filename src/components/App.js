@@ -7,7 +7,7 @@ import Library from "./library/Library";
 import Error from "./error";
 import MyContextProvider from "./MyContext";
 
-console.log(process.env);
+console.log(process.env.REACT_APP_YOUTUBE_API_KEY);
 
 class App extends React.Component {
   constructor() {
