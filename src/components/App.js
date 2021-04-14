@@ -1,11 +1,13 @@
-import React from 'react';
-import '../App.css';
-import { HashRouter, Route, Switch } from 'react-router-dom';
-import { API_KEY } from '../config/config';
-import Home from './home/Home';
-import Library from './library/Library';
-import Error from './error';
-import MyContextProvider from './MyContext';
+import React from "react";
+import "../App.css";
+import { HashRouter, Route, Switch } from "react-router-dom";
+import { API_KEY } from "../config/config";
+import Home from "./home/Home";
+import Library from "./library/Library";
+import Error from "./error";
+import MyContextProvider from "./MyContext";
+
+console.log(process.env);
 
 class App extends React.Component {
   constructor() {
@@ -14,19 +16,19 @@ class App extends React.Component {
   }
 
   state = {
-    mainVideo: 'https://www.youtube.com/embed/7Cykzsi38hA',
+    mainVideo: "https://www.youtube.com/embed/7Cykzsi38hA",
     watchLater: [],
-    buttonText: 'Translate to'
+    buttonText: "Translate to",
   };
   handleResize() {
     const { innerWidth: width } = window;
-    if (width <= 768 && this.state.buttonText === 'Translate to') {
+    if (width <= 768 && this.state.buttonText === "Translate to") {
       this.setState({
-        buttonText: 'Lang'
+        buttonText: "Lang",
       });
-    } else if (width > 768 && this.state.buttonText === 'Lang') {
+    } else if (width > 768 && this.state.buttonText === "Lang") {
       this.setState({
-        buttonText: 'Translate to'
+        buttonText: "Translate to",
       });
     }
   }
@@ -34,13 +36,13 @@ class App extends React.Component {
   // Load YouTube API
   loadYoutubeApi() {
     // creating script tag
-    const script = document.createElement('script');
-    script.src = 'https://apis.google.com/js/client.js';
+    const script = document.createElement("script");
+    script.src = "https://apis.google.com/js/client.js";
 
     script.onload = () => {
-      window.gapi.load('client', () => {
+      window.gapi.load("client", () => {
         window.gapi.client.setApiKey(API_KEY);
-        window.gapi.client.load('youtube', 'v3', () => {
+        window.gapi.client.load("youtube", "v3", () => {
           // Gapi Is Ready to use
         });
       });
@@ -51,35 +53,35 @@ class App extends React.Component {
 
   componentDidMount() {
     this.loadYoutubeApi();
-    window.addEventListener('resize', this.handleResize);
-    return () => window.removeEventListener('resize', this.handleResize);
+    window.addEventListener("resize", this.handleResize);
+    return () => window.removeEventListener("resize", this.handleResize);
   }
-  displayVideo = idishnik => {
-    this.setState({ mainVideo: 'https://www.youtube.com/embed/' + idishnik });
+  displayVideo = (idishnik) => {
+    this.setState({ mainVideo: "https://www.youtube.com/embed/" + idishnik });
   };
-  watchVideo = url => {
+  watchVideo = (url) => {
     this.setState({ mainVideo: url });
   };
-  saveURL = videoURL => {
-    console.log(videoURL.current.value.replace('watch?v=', 'embed/'));
-    let youtubeURL = videoURL.current.value.replace('watch?v=', 'embed/');
+  saveURL = (videoURL) => {
+    console.log(videoURL.current.value.replace("watch?v=", "embed/"));
+    let youtubeURL = videoURL.current.value.replace("watch?v=", "embed/");
     this.setState({ mainVideo: youtubeURL });
-    videoURL.current.value = '';
+    videoURL.current.value = "";
   };
-  saveVideo = idishnik => {
+  saveVideo = (idishnik) => {
     this.setState({
       watchLater: [
         ...this.state.watchLater,
-        'https://www.youtube.com/embed/' + idishnik
-      ]
+        "https://www.youtube.com/embed/" + idishnik,
+      ],
     });
   };
-  deleteVideo = vidos => {
-    const newArr = this.state.watchLater.filter(val => {
+  deleteVideo = (vidos) => {
+    const newArr = this.state.watchLater.filter((val) => {
       return val !== vidos;
     });
     this.setState({
-      watchLater: newArr
+      watchLater: newArr,
     });
   };
 
