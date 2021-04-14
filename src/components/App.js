@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   state = {
-    mainVideo: "https://www.youtube.com/embed/7Cykzsi38hA",
+    mainVideo: "https://www.youtube.com/embed/nbY_aP-alkw",
     watchLater: [],
     buttonText: "Translate to",
   };
