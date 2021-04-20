@@ -81,7 +81,6 @@ export default function VideosList({
         />
         <div className="second-form-item">
           <div className="subtitles">
-            <label htmlFor="subtitles">CC</label>
             <input
               type="checkbox"
               name="subtitles"
@@ -97,8 +96,9 @@ export default function VideosList({
                 // console.log(cc);
               }}
             />
+            <label htmlFor="subtitles">CC</label>
           </div>
-          <input type="submit" value="Search" />
+          <button type="submit">Search</button>
         </div>
       </form>
       {/* <div id="results">{vidosy}</div> */}
