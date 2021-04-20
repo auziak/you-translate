@@ -1,8 +1,8 @@
-import React, { useRef } from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useRef } from "react";
+import { NavLink } from "react-router-dom";
 
 export default function NavBar({ saveURL, search }) {
-  const videoURL = useRef('');
+  const videoURL = useRef("");
 
   return (
     <nav>
@@ -37,10 +37,6 @@ export default function NavBar({ saveURL, search }) {
             </button>
           </div>
         ) : null}
-
-        <a className="logo" href="#">
-          Logo
-        </a>
       </div>
     </nav>
   );
